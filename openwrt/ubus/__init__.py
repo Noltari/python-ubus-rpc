@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""OpenWrt ubus API."""
+"""OpenWrt ubus RPC API."""
 from .interface import Ubus
 
 __all__ = ["Ubus"]

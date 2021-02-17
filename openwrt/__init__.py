@@ -1,0 +1,2 @@
+"""OpenWrt."""
+from . import ubus

@@ -13,10 +13,13 @@ from .const import (
     API_DEF_VERIFY,
     API_ERROR,
     API_MESSAGE,
+    API_METHOD_BOARD,
     API_METHOD_GET,
     API_METHOD_GET_CLIENTS,
+    API_METHOD_INFO,
     API_METHOD_LOGIN,
     API_METHOD_READ,
+    API_METHOD_REBOOT,
     API_PARAM_CONFIG,
     API_PARAM_PASSWORD,
     API_PARAM_PATH,
@@ -31,6 +34,7 @@ from .const import (
     API_SUBSYS_FILE,
     API_SUBSYS_HOSTAPD,
     API_SUBSYS_SESSION,
+    API_SUBSYS_SYSTEM,
     API_SUBSYS_UCI,
     API_UBUS_RPC_SESSION,
     HTTP_STATUS_OK,
@@ -199,3 +203,19 @@ class Ubus:
                 API_PARAM_TYPE: _type,
             },
         )
+
+    def get_system_method(self, method):
+        """Get system method."""
+        return self.api_call(API_RPC_CALL, API_SUBSYS_SYSTEM, method)
+
+    def system_board(self):
+        """System board."""
+        return self.get_system_method(API_METHOD_BOARD)
+
+    def system_info(self):
+        """System info."""
+        return self.get_system_method(API_METHOD_INFO)
+
+    def system_reboot(self):
+        """System reboot."""
+        return self.get_system_method(API_METHOD_REBOOT)

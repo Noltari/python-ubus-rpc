@@ -14,7 +14,7 @@ if sys.argv[-1] == 'publish':
 requirements = [x.strip() for x in open(here('requirements.txt')).readlines()]
 
 setup(name='openwrt-ubus-rpc',
-      version='0.0.1',
+      version='0.0.2',
       description='OpenWrt ubus RPC API library',
       keywords='api,openwrt,ubus',
       author='noltari',

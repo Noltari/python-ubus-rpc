@@ -34,7 +34,7 @@ Usage
 
 ```python
 from openwrt.ubus import Ubus
-_ubus = Ubus(host="http://openwrt_host/ubus", user="openwrt_user", password="openwrt_password")
+_ubus = Ubus(host="http://openwrt_host/ubus", username="openwrt_user", password="openwrt_password")
 _ubus.connect()
 _ubus.get_hostapd()
 _ubus.get_hostapd_clients("hostapd.wlan0")
